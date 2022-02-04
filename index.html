@@ -11,8 +11,8 @@
 </head>
 
 <header>
-    <div class="topnav">
-        <div class="contact">
+    <div class="topnav" id="topnav">
+        <div class="contact" onclick="contact()">
             <i class="fas fa-phone-alt"></i>
             <h5>CONTACT</h5>
         </div>
@@ -34,7 +34,7 @@
             <li><h5 onclick="changePage(this)">New</h5></li>
             <li><h5 onclick="changePage(this)">Shirts</h5></li>
             <li><h5 onclick="changePage(this)">T-Shirts</h5></li>
-            <li><h5 onclick="changePage(this)">Jeans</h5></li>
+            <li><h5 onclick="changePage(this)">Pants</h5></li>
             <li><h5 onclick="changePage(this)">Jackets</h5></li>
             <li><h5 onclick="changePage(this)">More</h5></li>
         </ul>
@@ -42,11 +42,175 @@
 </nav>
 
 <body>
-    <section class="sale-section">
-        <img src="image/offer.gif">
+   <section class="sale-slider">
+        <div class="slider">
+            <div class="slide active">
+                <a href="pages/t-shirts.html"><img id="image" src="image/slide1.jpg"></a>
+            </div>
+            <div class="slide">
+                <a href="pages/pants.html"><img id="image" src="image/slide2.jpg"></a>
+            </div>
+            <div class="slide">
+                <a href="pages/jackets.html"><img id="image" src="image/slide3.jpg"></a>
+            </div>
+        </div>
     </section>
-    
+
+    <section class="shirts">
+        <div class="flex-container"></div>
+    </section>
+
+    <section class="main">
+        <h1>New Arrivals</h1>
+        <div class="flex-container new" id="new">
+            <div class="item-container">
+                <img src="image/New/long sleeve t-shirts.jpeg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Long Sleeve T-Shirts</h3>
+                        <h4>₹300</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="image/New/shirts.jpeg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Shirts</h3>
+                        <h4>₹200-₹400</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="image/New/sweatpants.jpeg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Sweatpants</h3>
+                        <h4>₹300</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="image/New/t-shirts.jpeg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>T-Shirts</h3>
+                        <h4>₹300</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1>Best Selling</h1>
+        <div class="flex-container best">
+            <div class="item-container">
+                <img src="image/Shirts/300883211-NAVY_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Navy Camo Shirt</h3>
+                        <h4>₹499</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="image/Pants/100001_300844929_043_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Grey Sweatpants</h3>
+                        <h4>₹699</h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item-container">
+                <img src="/image/T-Shirts/100001_300862614_002_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Polaroid T-Shirt</h3>
+                        <h4>₹399</h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="item-container">
+                <img src="image/Jackets/100001_300871160_002_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Addidas Jacket</h3>
+                        <h4>₹999</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h1 class="top">Top Picks For You</h1>
+        <div class="flex-container ">
+            <div class="item-container">
+                <img src="image/Pants/100001_300852915_043_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Chinos</h3>
+                        <h4>₹500-₹799</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="/image/Shirts/100001_300871013_075_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Kurtas</h3>
+                        <h4>₹200-₹400</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="/image/T-Shirts/2050026615359_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Hoodies</h3>
+                        <h4>₹499-₹699</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="item-container">
+                <img src="/image/Pants/100001_300848025_068_1.jpg">
+                <div class="overlay">
+                    <div class="text">
+                        <h3>Jeans</h3>
+                        <h4>₹799</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>    
 
     <script src="script.js"></script>
+    <script src="slider.js"></script>
 </body>
+
+<footer>
+    <div class="icons">
+        <ul>
+            <li><a href="https://www.facebook.com/cr7menswear/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+            <li><a href="https://www.instagram.com/cr7.menswear/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="tel:8848361748" target="_blank"><i class="fas fa-mobile"></i></a></li>
+            <li><a href="https://goo.gl/maps/ts4FURnK71nGZAkb6" target="_blank"><i class="fas fa-map-marker-alt"></i></a></li>
+        </ul>
+    </div>
+    <div class="links">
+        <ul>
+            <li><a href="#topnav">Home</a></li>
+            <li><a href="tel:8848361748">Contact Us</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="https://www.privacypolicytemplate.net/live.php?token=W3TMrMlRvJr0lSGUq0ypS5X7ajx5FOim" target="_blank">Privacy Policy</a></li>
+        </ul>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2022 Cr7 Menswear. All Rights Reserved.</p>
+    </div>
+</footer>
+
 </html>

@@ -126,6 +126,12 @@ header{
     }
 }
 @media (max-width: 600px) {
+    .topnav{
+        height: 80px;     
+    }
+    .logo img{
+        height: 80px;
+    }
     .contact{
         gap: 5px;
         font-size: 12px;
@@ -138,3 +144,165 @@ header{
     }    
 }
 
+
+/* ===========================GRID============================= */
+
+.grid-banner{
+    grid-column: span 4;
+    width: 100%;
+}
+
+.grid-banner img{
+    width: 100%;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-container .grid-item{
+    overflow: hidden;
+    height: 100%;
+}
+
+.grid-container .grid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 250ms;
+}
+
+.grid-item:hover img{
+    transform: scale(1.5);
+}
+
+.grid-item:nth-child(2){
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+@media (max-width: 1290px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 230px);
+    }
+}
+@media (max-width: 1000px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 190px);
+    }
+}
+@media (max-width: 800px) {
+    .grid-container{
+        grid-template-columns: repeat(3, 100px);
+    }
+    .grid-banner{
+        grid-column: span 3;
+    }
+}
+
+.grid-container .Jacketgrid-item{
+    overflow: hidden;
+    height: 100%;
+}
+
+.grid-container .Jacketgrid-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 250ms;
+}
+
+.Jacketgrid-item:hover img{
+    transform: scale(1.5);
+}
+
+/* ===========================Footer Section============================= */
+
+footer{
+    height: fit-content;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer::before{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: black;
+    position: relative;
+    top: -10px;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer li{
+    opacity: 0.7;
+    transition: 100ms;
+}
+
+footer .icons i{
+    color: #4b4c4d;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 10px;
+    width: 24px;
+    font-size: 24px;
+    text-align: center;
+}
+
+footer li:hover{
+    opacity: 1;
+}
+
+footer a{
+    text-decoration: none;
+    color: #4b4c4d;
+}
+
+footer .links{
+    font-size: 20px;
+}
+
+footer .links ul{
+    gap: 30px;
+} 
+footer .copyright{
+    font-size: 16px;
+}
+
+@media (max-width: 650px) {
+    footer .links ul{
+        font-size: 16px;
+        gap: 15px;
+    }
+    footer .links a{
+        width: fit-content;
+        white-space: nowrap;
+    }
+    footer .icons i{
+        font-size: 20px;
+        width: 20px
+    }
+    footer .copyright{
+        font-size: 12px;
+    }
+}
