@@ -17,14 +17,36 @@ function changePage(text){
     }
 }
 
+const searchbar = document.getElementById("search");
+let opened = false;
 function searchText(){
+    if (screen.width <= 1000 && opened == false) {
+        searchbar.style.height = "20px";
+        document.querySelector(".bottomnav").style.marginTop = "25px";
+        searchAndroid();
+        opened = true
+        return;
+    }
+    else if (screen.width > 1000){
+        searcher();
+    }
+    else if (opened == true){
+        searcher();
+    }
+}
+searchbar.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("searchButton").click();
+    }});
+
+function searcher(){
     var currentLocation = window.location.href;
     var search = document.querySelector("#search").value;
     search = search.toLowerCase();
 
     currentLocation = currentLocation.split("/");
     search=search.split(" ");
-    console.log(currentLocation);
 
     if (search.includes("shirt") || search.includes("shirts")){
         if (currentLocation.includes("pages")){
@@ -72,6 +94,7 @@ function searchText(){
             return
         }
     }
+    
 }
 
 function scrollTop(){
@@ -81,4 +104,13 @@ function scrollTop(){
 
 function contact(){
     window.location.href = "tel:8848361748";
+}
+
+if (screen.width <= 1000){
+}
+
+function searchAndroid(){
+    document.getElementById("search").placeholder= "Search for products...";
+
+ 
 }
